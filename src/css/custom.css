@@ -3,7 +3,9 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+@import url('./fonts.css');
 
+/* You can override the default Infima variables here. */
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #ff6600;
@@ -83,56 +85,56 @@ figure div.figure {
 }
 
 /* Mermaid diagrams styling. */
-.mermaid-producer > circle,
-.mermaid-producer > rect {
+.mermaid-producer>circle,
+.mermaid-producer>rect {
   fill: #a9def9 !important;
   stroke: var(--ifm-color-gray-800) !important;
 }
 
-html[data-theme='dark'] .mermaid-producer > circle,
-html[data-theme='dark'] .mermaid-producer > rect {
+html[data-theme='dark'] .mermaid-producer>circle,
+html[data-theme='dark'] .mermaid-producer>rect {
   fill: #003d5b !important;
   stroke: var(--ifm-color-gray-200) !important;
 }
 
-.mermaid-exchange > polygon {
+.mermaid-exchange>polygon {
   fill: #fae0e4 !important;
   stroke: var(--ifm-color-gray-800) !important;
 }
 
-html[data-theme='dark'] .mermaid-exchange > polygon {
+html[data-theme='dark'] .mermaid-exchange>polygon {
   fill: #a4133c !important;
   stroke: var(--ifm-color-gray-200) !important;
 }
 
-.mermaid-queue > polygon {
+.mermaid-queue>polygon {
   fill: #ede7b1 !important;
   stroke: var(--ifm-color-gray-800) !important;
 }
 
-html[data-theme='dark'] .mermaid-queue > polygon {
+html[data-theme='dark'] .mermaid-queue>polygon {
   fill: #926c15 !important;
   stroke: var(--ifm-color-gray-200) !important;
 }
 
-.mermaid-consumer > circle,
-.mermaid-consumer > rect {
+.mermaid-consumer>circle,
+.mermaid-consumer>rect {
   fill: #d3f8e2 !important;
   stroke: var(--ifm-color-gray-800) !important;
 }
 
-html[data-theme='dark'] .mermaid-consumer > circle,
-html[data-theme='dark'] .mermaid-consumer > rect {
+html[data-theme='dark'] .mermaid-consumer>circle,
+html[data-theme='dark'] .mermaid-consumer>rect {
   fill: #606c38 !important;
   stroke: var(--ifm-color-gray-200) !important;
 }
 
-.mermaid-msg > rect {
+.mermaid-msg>rect {
   fill: #ced4da !important;
   stroke: var(--ifm-color-gray-800) !important;
 }
 
-html[data-theme='dark'] .mermaid-msg > rect {
+html[data-theme='dark'] .mermaid-msg>rect {
   fill: #495057 !important;
   stroke: var(--ifm-color-gray-200) !important;
 }
@@ -268,12 +270,12 @@ html[data-theme='dark'] .release-information {
   padding-left: 0;
 }
 
-.release-links ul > li {
+.release-links ul>li {
   display: inline-block;
   list-style-type: none;
 }
 
-.release-links ul > li + li {
+.release-links ul>li+li {
   margin-top: 0;
   margin-left: 0.5em;
   padding-left: 0.5em;
@@ -505,7 +507,9 @@ html[data-theme='dark'] .release-info-grid .release-toggle path {
 }
 
 @media (max-width: 1200px) {
-  .DocSearch-Button-Keys, .DocSearch-Button-Placeholder {
-      display: none !important;
+
+  .DocSearch-Button-Keys,
+  .DocSearch-Button-Placeholder {
+    display: none !important;
   }
 }

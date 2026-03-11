@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import imgRendering from './src/rehype/img-rendering.js';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -67,15 +67,15 @@ const config = {
         // the future docs).
         'current': {
           releases: [
-            {version: '4.3.0', release_date: "2026-04-28", },
+            { version: '4.3.0', release_date: "2026-04-28", },
           ],
         },
         '4.2': {
           releases: [
-            {version: '4.2.4', release_date: "2026-02-17", },
-            {version: '4.2.3', release_date: "2026-01-22", },
-            {version: '4.2.2', release_date: "2025-12-15", },
-            {version: '4.2.1', release_date: "2025-11-18", },
+            { version: '4.2.4', release_date: "2026-02-17", },
+            { version: '4.2.3', release_date: "2026-01-22", },
+            { version: '4.2.2', release_date: "2025-12-15", },
+            { version: '4.2.1', release_date: "2025-11-18", },
             {
               version: '4.2.0',
               release_date: "2025-10-28",
@@ -86,14 +86,14 @@ const config = {
         },
         '4.1': {
           releases: [
-            {version: '4.1.8', release_date: "2026-01-22", },
-            {version: '4.1.7', release_date: "2025-12-16", },
-            {version: '4.1.6', release_date: "2025-11-18", },
-            {version: '4.1.5', release_date: "2025-10-28", },
-            {version: '4.1.4', release_date: "2025-09-02", },
-            {version: '4.1.3', release_date: "2025-08-05", },
-            {version: '4.1.2', release_date: "2025-07-08", },
-            {version: '4.1.1', release_date: "2025-06-04", },
+            { version: '4.1.8', release_date: "2026-01-22", },
+            { version: '4.1.7', release_date: "2025-12-16", },
+            { version: '4.1.6', release_date: "2025-11-18", },
+            { version: '4.1.5', release_date: "2025-10-28", },
+            { version: '4.1.4', release_date: "2025-09-02", },
+            { version: '4.1.3', release_date: "2025-08-05", },
+            { version: '4.1.2', release_date: "2025-07-08", },
+            { version: '4.1.1', release_date: "2025-06-04", },
             {
               version: '4.1.0',
               release_date: "2025-04-15",
@@ -110,14 +110,14 @@ const config = {
         },
         '4.0': {
           releases: [
-            {version: '4.0.9', release_date: "2025-04-14", },
-            {version: '4.0.8', release_date: "2025-04-03", },
-            {version: '4.0.7', release_date: "2025-02-26", },
-            {version: '4.0.6', release_date: "2025-02-11", },
-            {version: '4.0.5', release_date: "2024-12-15", },
-            {version: '4.0.4', release_date: "2024-11-21", },
-            {version: '4.0.3', release_date: "2024-10-28", },
-            {version: '4.0.2', release_date: "2024-09-21", },
+            { version: '4.0.9', release_date: "2025-04-14", },
+            { version: '4.0.8', release_date: "2025-04-03", },
+            { version: '4.0.7', release_date: "2025-02-26", },
+            { version: '4.0.6', release_date: "2025-02-11", },
+            { version: '4.0.5', release_date: "2024-12-15", },
+            { version: '4.0.4', release_date: "2024-11-21", },
+            { version: '4.0.3', release_date: "2024-10-28", },
+            { version: '4.0.2', release_date: "2024-09-21", },
             {
               version: '4.0.1',
               release_date: "2024-09-18",
@@ -133,13 +133,13 @@ const config = {
         },
         '3.13': {
           releases: [
-            {version: '3.13.7', release_date: "2024-08-26", },
-            {version: '3.13.6', release_date: "2024-07-23", },
-            {version: '3.13.5', release_date: "2024-07-19", },
-            {version: '3.13.4', release_date: "2024-07-03", },
-            {version: '3.13.3', release_date: "2024-05-31", },
-            {version: '3.13.2', release_date: "2024-04-30", },
-            {version: '3.13.1', release_date: "2024-03-29", },
+            { version: '3.13.7', release_date: "2024-08-26", },
+            { version: '3.13.6', release_date: "2024-07-23", },
+            { version: '3.13.5', release_date: "2024-07-19", },
+            { version: '3.13.4', release_date: "2024-07-03", },
+            { version: '3.13.3', release_date: "2024-05-31", },
+            { version: '3.13.2', release_date: "2024-04-30", },
+            { version: '3.13.1', release_date: "2024-03-29", },
             {
               version: '3.13.0',
               release_date: "2024-02-22",
@@ -155,85 +155,85 @@ const config = {
         },
         '3.12': {
           releases: [
-            {version: '3.12.14', release_date: "2024-05-06", },
-            {version: '3.12.13', release_date: "2024-02-16", },
-            {version: '3.12.12', release_date: "2024-01-09", },
-            {version: '3.12.11', release_date: "2023-12-22", },
-            {version: '3.12.10', release_date: "2023-11-21", },
-            {version: '3.12.9', release_date: "2023-11-17", },
-            {version: '3.12.8', release_date: "2023-11-01", },
-            {version: '3.12.7', release_date: "2023-10-18", },
-            {version: '3.12.6', release_date: "2023-09-22", },
-            {version: '3.12.5', release_date: "2023-09-20", },
-            {version: '3.12.4', release_date: "2023-08-24", },
-            {version: '3.12.3', release_date: "2023-08-18", },
-            {version: '3.12.2', release_date: "2023-07-18", },
-            {version: '3.12.1', release_date: "2023-06-26", },
-            {version: '3.12.0', release_date: "2023-06-02", },
+            { version: '3.12.14', release_date: "2024-05-06", },
+            { version: '3.12.13', release_date: "2024-02-16", },
+            { version: '3.12.12', release_date: "2024-01-09", },
+            { version: '3.12.11', release_date: "2023-12-22", },
+            { version: '3.12.10', release_date: "2023-11-21", },
+            { version: '3.12.9', release_date: "2023-11-17", },
+            { version: '3.12.8', release_date: "2023-11-01", },
+            { version: '3.12.7', release_date: "2023-10-18", },
+            { version: '3.12.6', release_date: "2023-09-22", },
+            { version: '3.12.5', release_date: "2023-09-20", },
+            { version: '3.12.4', release_date: "2023-08-24", },
+            { version: '3.12.3', release_date: "2023-08-18", },
+            { version: '3.12.2', release_date: "2023-07-18", },
+            { version: '3.12.1', release_date: "2023-06-26", },
+            { version: '3.12.0', release_date: "2023-06-02", },
           ],
           end_of_support: "2025-06-30",
         },
         '3.11': {
           releases: [
-            {version: '3.11.28', release_date: "2023-12-22", },
-            {version: '3.11.27', release_date: "2023-12-15", },
-            {version: '3.11.26', release_date: "2023-11-20", },
-            {version: '3.11.25', release_date: "2023-11-01", },
-            {version: '3.11.24', release_date: "2023-10-18", },
-            {version: '3.11.23', release_date: "2023-09-12", },
-            {version: '3.11.22', release_date: "2023-08-24", },
-            {version: '3.11.21', release_date: "2023-08-18", },
-            {version: '3.11.20', release_date: "2023-07-18", },
-            {version: '3.11.19', release_date: "2023-06-26", },
-            {version: '3.11.18', release_date: "2023-06-07", },
-            {version: '3.11.17', release_date: "2023-05-29", },
-            {version: '3.11.16', release_date: "2023-05-13", },
-            {version: '3.11.15', release_date: "2023-04-30", },
-            {version: '3.11.14', release_date: "2023-04-29", },
-            {version: '3.11.13', release_date: "2023-03-31", },
-            {version: '3.11.12', release_date: "2023-03-30", },
-            {version: '3.11.11', release_date: "2023-03-20", },
-            {version: '3.11.10', release_date: "2023-03-02", },
-            {version: '3.11.9', release_date: "2023-02-13", },
-            {version: '3.11.8', release_date: "2023-01-30", },
-            {version: '3.11.7', release_date: "2023-01-17", },
-            {version: '3.11.6', release_date: "2023-01-05", },
-            {version: '3.11.5', release_date: "2022-12-14", },
-            {version: '3.11.4', release_date: "2022-11-29", },
-            {version: '3.11.3', release_date: "2022-11-10", },
-            {version: '3.11.2', release_date: "2022-10-19", },
-            {version: '3.11.1', release_date: "2022-10-13", },
-            {version: '3.11.0', release_date: "2022-09-28", },
+            { version: '3.11.28', release_date: "2023-12-22", },
+            { version: '3.11.27', release_date: "2023-12-15", },
+            { version: '3.11.26', release_date: "2023-11-20", },
+            { version: '3.11.25', release_date: "2023-11-01", },
+            { version: '3.11.24', release_date: "2023-10-18", },
+            { version: '3.11.23', release_date: "2023-09-12", },
+            { version: '3.11.22', release_date: "2023-08-24", },
+            { version: '3.11.21', release_date: "2023-08-18", },
+            { version: '3.11.20', release_date: "2023-07-18", },
+            { version: '3.11.19', release_date: "2023-06-26", },
+            { version: '3.11.18', release_date: "2023-06-07", },
+            { version: '3.11.17', release_date: "2023-05-29", },
+            { version: '3.11.16', release_date: "2023-05-13", },
+            { version: '3.11.15', release_date: "2023-04-30", },
+            { version: '3.11.14', release_date: "2023-04-29", },
+            { version: '3.11.13', release_date: "2023-03-31", },
+            { version: '3.11.12', release_date: "2023-03-30", },
+            { version: '3.11.11', release_date: "2023-03-20", },
+            { version: '3.11.10', release_date: "2023-03-02", },
+            { version: '3.11.9', release_date: "2023-02-13", },
+            { version: '3.11.8', release_date: "2023-01-30", },
+            { version: '3.11.7', release_date: "2023-01-17", },
+            { version: '3.11.6', release_date: "2023-01-05", },
+            { version: '3.11.5', release_date: "2022-12-14", },
+            { version: '3.11.4', release_date: "2022-11-29", },
+            { version: '3.11.3', release_date: "2022-11-10", },
+            { version: '3.11.2', release_date: "2022-10-19", },
+            { version: '3.11.1', release_date: "2022-10-13", },
+            { version: '3.11.0', release_date: "2022-09-28", },
           ],
           end_of_support: "2024-06-30",
         },
         '3.10': {
           releases: [
-            {version: '3.10.25', release_date: "2023-07-18", },
-            {version: '3.10.24', release_date: "2023-06-07", },
-            {version: '3.10.23', release_date: "2023-05-25", },
-            {version: '3.10.22', release_date: "2023-04-30", },
-            {version: '3.10.21', release_date: "2023-04-29", },
-            {version: '3.10.20', release_date: "2023-03-22", },
-            {version: '3.10.19', release_date: "2023-03-02", },
-            {version: '3.10.18', release_date: "2023-02-13", },
-            {version: '3.10.17', release_date: "2023-01-31", },
-            {version: '3.10.16', release_date: "2023-01-30", },
-            {version: '3.10.15', release_date: "2023-01-30", },
-            {version: '3.10.14', release_date: "2023-01-17", },
-            {version: '3.10.13', release_date: "2022-12-14", },
-            {version: '3.10.12', release_date: "2022-11-29", },
-            {version: '3.10.11', release_date: "2022-11-10", },
-            {version: '3.10.10', release_date: "2022-10-19", },
-            {version: '3.10.9', release_date: "2022-10-13", },
-            {version: '3.10.8', release_date: "2022-09-25", },
-            {version: '3.10.7', release_date: "2022-08-02", },
-            {version: '3.10.6', release_date: "2022-07-11", },
-            {version: '3.10.5', release_date: "2022-06-06", },
-            {version: '3.10.4', release_date: "2022-06-01", },
-            {version: '3.10.2', release_date: "2022-05-20", },
-            {version: '3.10.1', release_date: "2022-05-11", },
-            {version: '3.10.0', release_date: "2022-05-03", },
+            { version: '3.10.25', release_date: "2023-07-18", },
+            { version: '3.10.24', release_date: "2023-06-07", },
+            { version: '3.10.23', release_date: "2023-05-25", },
+            { version: '3.10.22', release_date: "2023-04-30", },
+            { version: '3.10.21', release_date: "2023-04-29", },
+            { version: '3.10.20', release_date: "2023-03-22", },
+            { version: '3.10.19', release_date: "2023-03-02", },
+            { version: '3.10.18', release_date: "2023-02-13", },
+            { version: '3.10.17', release_date: "2023-01-31", },
+            { version: '3.10.16', release_date: "2023-01-30", },
+            { version: '3.10.15', release_date: "2023-01-30", },
+            { version: '3.10.14', release_date: "2023-01-17", },
+            { version: '3.10.13', release_date: "2022-12-14", },
+            { version: '3.10.12', release_date: "2022-11-29", },
+            { version: '3.10.11', release_date: "2022-11-10", },
+            { version: '3.10.10', release_date: "2022-10-19", },
+            { version: '3.10.9', release_date: "2022-10-13", },
+            { version: '3.10.8', release_date: "2022-09-25", },
+            { version: '3.10.7', release_date: "2022-08-02", },
+            { version: '3.10.6', release_date: "2022-07-11", },
+            { version: '3.10.5', release_date: "2022-06-06", },
+            { version: '3.10.4', release_date: "2022-06-01", },
+            { version: '3.10.2', release_date: "2022-05-20", },
+            { version: '3.10.1', release_date: "2022-05-11", },
+            { version: '3.10.0', release_date: "2022-05-03", },
           ],
           end_of_support: "2023-12-31",
         },
@@ -253,10 +253,6 @@ const config = {
         docs: {
           sidebarPath: './sidebarsDocs.js',
 
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/rabbitmq/rabbitmq-website/tree/main/',
           versions: {
             '3.13': {
               banner: 'none'
@@ -266,10 +262,6 @@ const config = {
         blog: {
           blogSidebarCount: 0,
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/rabbitmq/rabbitmq-website/tree/main/',
           rehypePlugins: [imgRendering],
           // silence a warning about older blog posts with Docusaurus 3.5.0+
           onUntruncatedBlogPosts: 'ignore'
@@ -289,9 +281,6 @@ const config = {
         path: 'tutorials',
         routeBasePath: 'tutorials',
         sidebarPath: './sidebarsTutorials.js',
-        // Remove this to remove the "edit this page" links.
-        editUrl:
-          'https://github.com/rabbitmq/rabbitmq-website/tree/main/',
       },
     ],
     [
@@ -310,9 +299,6 @@ const config = {
         path: 'kubernetes',
         routeBasePath: 'kubernetes',
         sidebarPath: './sidebarsKubernetes.js',
-        // Remove this to remove the "edit this page" links.
-        editUrl:
-          'https://github.com/rabbitmq/rabbitmq-website/tree/main/',
       },
     ],
     [
@@ -322,9 +308,13 @@ const config = {
         path: 'client-libraries',
         routeBasePath: 'client-libraries',
         sidebarPath: './sidebarsClientLibs.js',
-        // Remove this to remove the "edit this page" links.
-        editUrl:
-          'https://github.com/rabbitmq/rabbitmq-website/tree/main/',
+      },
+    ],
+    [
+      "@cmfcmf/docusaurus-search-local",
+      {
+        indexDocs: true,
+        indexBlog: true,
       },
     ],
     "./src/plugins/configure-svgo.js",
@@ -351,19 +341,19 @@ const config = {
           src: 'img/rabbitmq-logo-by-tanzu.svg',
         },
         items: [
-          {to: '/tutorials', label: 'Getting Started', position: 'left'},
+          { to: '/tutorials', label: 'Getting Started', position: 'left' },
           {
             type: 'docSidebar',
             label: 'Docs',
             sidebarId: 'docsSidebar',
             position: 'left',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'docsVersionDropdown',
             position: 'right',
             dropdownItemsBefore: [
-              {type: 'html', value: '<strong>Release series</strong>'},
+              { type: 'html', value: '<strong>Release series</strong>' },
             ],
             dropdownItemsAfter: [
             ],
@@ -487,60 +477,60 @@ const config = {
           'yaml',
         ],
       },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'H10VQIW16Y',
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'H10VQIW16Y',
 
-        // Public API key: it is safe to commit it
-        apiKey: 'f23e8af89d899070974a643428531141',
+      //   // Public API key: it is safe to commit it
+      //   apiKey: 'f23e8af89d899070974a643428531141',
 
-        indexName: 'rabbitmq.com',
+      //   indexName: 'rabbitmq.com',
 
-        // Optional: see doc section below
-        contextualSearch: true,
+      //   // Optional: see doc section below
+      //   contextualSearch: true,
 
-        // Optional: Algolia search parameters
-        searchParameters: {},
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
 
-        // Optional: path for search page that enabled by default (`false` to
-        // disable it)
-        searchPagePath: 'search',
-      },
+      //   // Optional: path for search page that enabled by default (`false` to
+      //   // disable it)
+      //   searchPagePath: 'search',
+      // },
     }),
 
-  headTags: [
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Raleway:400,700',
-      },
-    },
-    {
-      tagName: 'script',
-      attributes: {
-        src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js',
-        'data-domain-script': "018ee308-473e-754f-b0c2-cbe82d25512f",
-      },
-    },
-    {
-      tagName: 'script',
-      attributes: {},
-      innerHTML: "function OptanonWrapper() {}",
-    },
-    {
-      tagName: 'script',
-      attributes: {},
-      innerHTML: "function setGTM(w, d, s, l, i) { w[l] = w[l] || []; w[l].push({  'gtm.start': new Date().getTime(),  event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],  j = d.createElement(s),  dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); } if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window, document, 'script', 'dataLayer', 'GTM-TT84L8K'); } else { waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) {  clearTimeout(timer);  setGTM(window, document, 'script', 'dataLayer', 'GTM-TT84L8K'); } else {  timer = setTimeout(waitForOnetrustActiveGroups, 250); } }",
-    },
-  ],
+  // headTags: [
+  //   {
+  //     tagName: 'link',
+  //     attributes: {
+  //       rel: 'stylesheet',
+  //       href: 'https://fonts.googleapis.com/css?family=Raleway:400,700',
+  //     },
+  //   },
+  //   {
+  //     tagName: 'script',
+  //     attributes: {
+  //       src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js',
+  //       'data-domain-script': "018ee308-473e-754f-b0c2-cbe82d25512f",
+  //     },
+  //   },
+  //   {
+  //     tagName: 'script',
+  //     attributes: {},
+  //     innerHTML: "function OptanonWrapper() {}",
+  //   },
+  //   {
+  //     tagName: 'script',
+  //     attributes: {},
+  //     innerHTML: "function setGTM(w, d, s, l, i) { w[l] = w[l] || []; w[l].push({  'gtm.start': new Date().getTime(),  event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],  j = d.createElement(s),  dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); } if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window, document, 'script', 'dataLayer', 'GTM-TT84L8K'); } else { waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) {  clearTimeout(timer);  setGTM(window, document, 'script', 'dataLayer', 'GTM-TT84L8K'); } else {  timer = setTimeout(waitForOnetrustActiveGroups, 250); } }",
+  //   },
+  // ],
 
   markdown: {
     mermaid: true,
   },
   themes: [
-      '@docusaurus/theme-mermaid',
-      'docusaurus-theme-github-codeblock'
+    '@docusaurus/theme-mermaid',
+    'docusaurus-theme-github-codeblock'
   ],
 };
 
