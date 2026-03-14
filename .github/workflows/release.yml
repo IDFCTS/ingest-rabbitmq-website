@@ -1,0 +1,40 @@
+name: Build and Release Docker Image
+
+on:
+  push:
+    branches:
+      - dist/air-gapped
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Build Docker image
+        run: docker build -f .Dockerfile -t rabbitmq-docs-offline:v${{ steps.version.outputs.version }} .
+
+      - name: Save Docker image
+        run: docker save rabbitmq-docs-offline:v${{ steps.version.outputs.version }} -o rabbitmq-docs-offline-v${{ steps.version.outputs.version }}.tar
+
+      - name: Create GitHub Release and upload asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v${{ steps.version.outputs.version }}"
+          if gh release view "$TAG" &>/dev/null; then
+            TAG="${TAG}-$(date +%s)"
+          fi
+          gh release create "$TAG" "rabbitmq-docs-offline-v${{ steps.version.outputs.version }}.tar" \
+            --title "Release ${TAG}" \
+            --notes "RabbitMQ Documentation offline image for version ${TAG}"
