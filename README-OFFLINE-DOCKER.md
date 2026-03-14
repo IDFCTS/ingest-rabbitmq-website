@@ -196,51 +196,52 @@ docker run -d -p 8080:80 --name rabbitmq-docs rabbitmq-docs-offline:latest
 
 The website will now be accessible at [http://localhost:8080](http://localhost:8080).
 
-## Creating a GitHub Release
+## Automated GitHub Release (GitHub Actions)
 
-### Using GitHub Web Interface
+This repository includes an automated workflow at `.github/workflows/release.yml`.
 
-1. **Tag the version**:
-   Ensure your `package.json` version is up to date.
-   ```bash
-   git tag v4.2.4
-   git push origin v4.2.4
-   ```
+### Trigger
 
-2. **Prepare the image asset**:
-   Build and save the image as a tarball:
-   ```bash
-   docker build -t rabbitmq-docs-offline:v4.2.4 .
-   docker save rabbitmq-docs-offline:v4.2.4 > rabbitmq-docs-offline-v4.2.4.tar
-   ```
+The workflow runs only when there is a push to the `dist/air-gapped` branch.
 
-3. **Create the release on GitHub**:
-   - Go to your repository on GitHub.
-   - Click on **Releases** -> **Draft a new release**.
-   - Select the tag `v4.2.4`.
-   - Title the release `Release v4.2.4`.
-   - Upload the `rabbitmq-docs-offline-v4.2.4.tar` file as a binary asset.
-   - Click **Publish release**.
+### What it does
 
-### Using GitHub CLI (`gh`)
+1. Checks out the repository.
+2. Extracts the release version from `package.json` (`.version`).
+3. Builds the image from `.Dockerfile` as `rabbitmq-docs-offline:v<version>`.
+4. Saves the image as `rabbitmq-docs-offline-v<version>.tar`.
+5. Creates a GitHub Release with tag `v<version>`.
+6. If the tag already exists, appends a timestamp to avoid collision (`v<version>-<timestamp>`).
+7. Uploads the `.tar` file as a release asset.
 
-Alternatively, you can create the release entirely from the command line:
+After the workflow finishes, download the generated `.tar` asset from the Release page and import it in the destination environment with `docker load`.
 
-1. **Tag and Push**:
-   ```bash
-   git tag v4.2.4
-   git push origin v4.2.4
-   ```
+## Key Differences: `main` vs `dist/air-gapped`
 
-2. **Build and Save Docker Image**:
-   ```bash
-   docker build -t rabbitmq-docs-offline:v4.2.4 .
-   docker save rabbitmq-docs-offline:v4.2.4 > rabbitmq-docs-offline-v4.2.4.tar
-   ```
+The `dist/air-gapped` branch includes only the following changes required for full air-gapped support.
 
-3. **Create Release and Upload Asset**:
-   ```bash
-   gh release create v4.2.4 rabbitmq-docs-offline-v4.2.4.tar --title "Release v4.2.4" --notes "RabbitMQ Documentation offline image for version v4.2.4"
-   ```
+### Offline Web Asset Changes
 
-This allows users in air-gapped environments to download the pre-built image asset directly from the GitHub release page.
+- Adds locally hosted Raleway font files under `static/fonts/`.
+- Adds `src/css/fonts.css` and imports it from `src/css/custom.css`.
+- Updates `docusaurus.config.js` for offline-safe behavior (no external font dependency).
+
+### Container Build and Release Changes
+
+- Adds `.Dockerfile` for building and packaging the docs site image.
+- Updates `Dockerfile.local` for local/offline-oriented image serving.
+- Adds `.github/workflows/release.yml` to automate build, tar export, and GitHub Release publishing from `dist/air-gapped` pushes.
+
+### Documentation and Usage Guide
+
+- Adds this guide: `README-OFFLINE-DOCKER.md`.
+
+## Manual Release (Optional)
+
+If automation is not available, the release can still be created manually.
+
+```bash
+docker build -f .Dockerfile -t rabbitmq-docs-offline:v4.2.4 .
+docker save rabbitmq-docs-offline:v4.2.4 > rabbitmq-docs-offline-v4.2.4.tar
+gh release create v4.2.4 rabbitmq-docs-offline-v4.2.4.tar --title "Release v4.2.4" --notes "RabbitMQ Documentation offline image for version v4.2.4"
+```
