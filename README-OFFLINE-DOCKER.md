@@ -141,7 +141,7 @@ COPY . .
 RUN npm run docusaurus build
 
 # Stage 2: Serve with Nginx
-FROM nginxinc/nginx-unprivileged:alpine
+FROM nginxinc/ngin:alpine
 # Copy the built site from the builder stage
 COPY --from=builder /app/build /usr/share/nginx/html
 
